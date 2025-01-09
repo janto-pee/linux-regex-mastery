@@ -1,0 +1,2 @@
+# Remember the days of endless manual configurations, clicking through repetitive tasks that drain your time and focus. Powershell offers efficiency revolution. 
+# powershell automates taks saving time. Imagine managing multiple servers simultenously, deploying app just by clicks, automating tedious user creation, all while taking coffe
