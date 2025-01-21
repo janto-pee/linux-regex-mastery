@@ -37,11 +37,27 @@ egrep "ab?" ./00\ Content/02-content # a followed by one or more b's --- preceed
 grep "ab\{2\}" ./00\ Content/02-content # a followed by one or more b's --- preceeding repition
 *grep "[[:lower:]?]_"  ./00\ Content/02-content # sequence of lower case letters joined by underscore
 *grep "[[:upper:]]\{1\}[[:lower:]]\{1\}" ./00\ Content/02-content # sequence of lower case letters joined by underscore
-grep ".*a.*b$" ./00\ Content/02-content  # string has a followed by anything ending in 'b'
+grep "a.*b$" ./00\ Content/02-content
+grep "a.*b$" ./00\ Content/02-content  # string has a followed by anything ending in 'b'
 grep "[[:alpha:]].*a.*b$" ./00\ Content/02-content  # string has a followed by anything ending in 'b'
 egrep "[[:alpha:]]?a.*b$" ./00\ Content/02-content  # string has a followed by anything ending in 'b'
-grep "^lamb" ./00\ Content/02-content  # matches word at the beginning of a string
+grep "^\w" ./00\ Content/02-content  # matches word at the beginning of a string
 grep "\<lamb" ./00\ Content/02-content  # matches word at the beginning of a string
 grep "chop$" ./00\ Content/02-content  # matches word at the end of a string
-grep "chop\>" ./00\ Content/02-content  # matches word at the end of a string
-egrep "chop[[:punct:]]?\>" ./00\ Content/02-content
+grep "\w\>" ./00\ Content/02-content  # matches word at the end of a string
+grep "\w+\S*$"  ./00\ Content/02-content  
+grep "\w[[:punct:]]*$"  ./00\ Content/02-content # matches a word at the end of a string with optional punctuation(*egrep "chop[[:punct:]]?\>" ./00\ Content/02-content)
+grep "\w*z.\w*" ./00\ Content/02-content #matches a word containing z
+grep "\Bz\B" ./00\ Content/02-content # matches word containing z not at start or end of the word
+grep "^[A-Za-z0-9_]*$" ./00\ Content/02-content  #match a string that contain only upper and lowerand numbers and underscore
+grep "^9" ./00\ Content/02-content
+
+
+
+
+
+
+
+grep "\Bz\B" ./00\ Content/02-content
+
+
